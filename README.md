@@ -26,14 +26,16 @@ This repository contains the dataset and code for the NTC-SCV project (Vietnames
 
 ## Getting Started
 
-### 1. Clone the repository
+### 1. Clone the repository:
 
 ```bash
 git clone https://github.com/congnghia0609/ntc-scv.git
 unzip ./ntc-scv/data/data_test.zip -d ./data # Unzip the data_test.zip file into the ./data directory
 unzip ./ntc-scv/data/data_train.zip -d ./data # Unzip the data_train.zip file into the ./data directory
 rm -rf ./ntc-scv # Remove the ntc-scv directory and its contents
+cd ntc-scv
+```bash
+exit 0
 
-
-
+### 2. Preprocessing:
 
