@@ -34,8 +34,7 @@ unzip ./ntc-scv/data/data_test.zip -d ./data # Unzip the data_test.zip file into
 unzip ./ntc-scv/data/data_train.zip -d ./data # Unzip the data_train.zip file into the ./data directory
 rm -rf ./ntc-scv # Remove the ntc-scv directory and its contents
 cd ntc-scv
-```bash
-exit 0
+```
 
 ### 2. Preprocessing:
 
