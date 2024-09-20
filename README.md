@@ -26,15 +26,61 @@ This repository contains the dataset and code for the NTC-SCV project (Vietnames
 
 ## Getting Started
 
-### 1. Clone the repository:
+# Text Classification using Neural Networks
 
+## Project Overview
+This repository implements a **text classification** model using a **neural network** in PyTorch. It performs binary sentiment classification on Vietnamese text data.
+
+## Project Structure
 ```bash
-git clone https://github.com/congnghia0609/ntc-scv.git
-unzip ./ntc-scv/data/data_test.zip -d ./data # Unzip the data_test.zip file into the ./data directory
-unzip ./ntc-scv/data/data_train.zip -d ./data # Unzip the data_train.zip file into the ./data directory
-rm -rf ./ntc-scv # Remove the ntc-scv directory and its contents
-cd ntc-scv
+/Text-Classification-using-Neural-Network/
+│
+├── data/                           # Directory containing training, validation, and test data
+│   ├── data_train/                 # Training data
+│   ├── data_test/                  # Testing data
+├── models/                         # Directory for saving trained models
+├── notebooks/                      # Jupyter notebooks for exploration and visualization
+├── src/                            # Python scripts for data processing, model training, etc.
+│   ├── preprocess.py               # Preprocessing text data
+│   ├── model.py                    # Neural network model definition
+│   ├── train.py                    # Training loop
+│   ├── evaluate.py                 # Model evaluation
+│   └── predict.py                  # Prediction script
+├── README.md                       # Project overview
+└── requirements.txt                # Required dependencies
 ```
 
-### 2. Preprocessing:
+## Installation
+```bash
+# Clone the repository
+git clone https://github.com/congnghia0609/ntc-scv.git
+# Change to the project directory
+cd Text-Classification-using-Neural-Network
+# Install required dependencies
+pip install -r requirements.txt
+```
+
+## Dataset
+```bash
+#Download and unzip the NTC-SCV dataset
+git clone https://github.com/congnghia0609/ntc-scv.git
+unzip ./ntc-scv/data/data_train.zip -d ./data
+unzip ./ntc-scv/data/data_test.zip -d ./data
+```
+## Preprocessing
+## Model Definition
+## Training the Model
+## Evaluation
+## Prediction
+```bash
+def predict(text):
+    with torch.no_grad():
+        encoded_text = torch.tensor(vocabulary(tokenizer(text)))
+        output = model(encoded_text, torch.tensor([0]))
+        return output.argmax(1).item()
+# Example usage
+print(predict("Sản phẩm này rất tuyệt vời!"))
+
+```
+
 
